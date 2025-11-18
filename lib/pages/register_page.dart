@@ -65,16 +65,27 @@ class _RegisterPageState extends State<RegisterPage> {
   // create a user document and collet them in fire store
   Future<void> createUserDocument(UserCredential? userCredential) async {
     if (userCredential != null && userCredential.user != null) {
-      await FirebaseFirestore.instance
-          .collection("Users")
-          .doc(userCredential.user!.email)
-          .set({
-            'email': userCredential.user!.email,
-            'username': userNameController.text,
-          });
+      final user = userCredential.user!;
+      await FirebaseFirestore.instance.collection("Users").doc(user.uid).set({
+        'uid': user.uid,
+        'email': user.email,
+        'username': userNameController.text,
+        'created_at': DateTime.now(),
+      });
     }
   }
-
+  // // create a user document and collet them in fire store// oldversion
+  // Future<void> createUserDocument(UserCredential? userCredential) async {
+  //   if (userCredential != null && userCredential.user != null) {
+  //     await FirebaseFirestore.instance
+  //         .collection("Users")
+  //         .doc(userCredential.user!.email)
+  //         .set({
+  //           'email': userCredential.user!.email,
+  //           'username': userNameController.text,
+  //         });
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
