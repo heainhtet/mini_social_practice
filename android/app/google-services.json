@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85829397491",
+    "project_id": "typetalk-f9066",
+    "storage_bucket": "typetalk-f9066.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85829397491:android:a696491021cb0347110086",
+        "android_client_info": {
+          "package_name": "com.example.minisocial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP7FhBj3xlqDX-dPAJgQnTp-e-yqZV6v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
